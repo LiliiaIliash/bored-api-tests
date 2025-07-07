@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "activity", "type", "participants",
+    "price", "availability", "accessibility",
+    "key"
+  ],
+  "properties": {
+    "activity":      { "type": "string" },
+    "type":          { "type": "string" },
+    "participants":  { "type": "integer", "minimum": 1 },
+    "price":         { "type": "number", "minimum": 0, "maximum": 1 },
+    "availability":  { "type": "number", "minimum": 0, "maximum": 1 },
+    "accessibility": { "type": "string" },
+    "duration":      { "type": "string" },
+    "kidFriendly":   { "type": "boolean" },
+    "link":          { "type": "string" },
+    "key":           { "type": "string" }
+  }
+}
+
