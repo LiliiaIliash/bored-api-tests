@@ -7,7 +7,7 @@ How to build and run the project from scratch.
 ### Prerequisites
 Make sure **Git** and **Python 3** (≥ 3.8) are installed on your machine.
 
-### 1 — Clone the repository
+1 — Clone the repository
 ```bash
 git clone https://github.com/LiliiaIliash/bored-api-tests.git
 

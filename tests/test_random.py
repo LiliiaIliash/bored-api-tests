@@ -3,17 +3,6 @@ from jsonschema import validate
 from pathlib import Path
 import pytest
 import json
-import requests
-
-BASE_URL = "https://bored-api.appbrewery.com"
-@pytest.fixture(scope="session")
-def base_url():
-    return BASE_URL
-
-@pytest.fixture
-def session():
-    with requests.Session() as s:
-        yield s
 
 schema_path = Path(__file__).parent.parent / "schemas" / "activity_schema.json"
 schema = json.loads(schema_path.read_text())

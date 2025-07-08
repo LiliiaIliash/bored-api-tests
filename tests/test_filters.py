@@ -2,22 +2,10 @@ from jsonschema import validate
 from pathlib import Path
 import pytest
 import json
-import requests
-
-from conftest import BASE_URL
 
 SCHEMA = json.loads(
     (Path(__file__).parent.parent / "schemas" / "activity_schema.json").read_text()
 )
-
-@pytest.fixture(scope="session")
-def base_url():
-    return BASE_URL
-
-@pytest.fixture
-def session():
-    with requests.Session() as s:
-        yield s
 
 @pytest.mark.parametrize("params", [
     {"type": "education"},
